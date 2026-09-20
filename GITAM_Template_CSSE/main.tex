@@ -1,0 +1,75 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Boadilla}
+% 1. Define your custom color using RGB values (0-255)
+\definecolor{MyUnivGreen}{RGB}{0, 115, 103}
+
+% 2. Force the entire Beamer structure to use this color
+\usecolortheme[named=MyUnivGreen]{structure}
+\usefonttheme{serif}
+\usepackage{cite}
+\usepackage[table]{xcolor} % Required for table coloring
+\usepackage{lipsum}
+\usepackage{graphicx,xcolor}
+\usepackage{amsmath,amssymb,amsfonts}
+
+\logo{\includegraphics[width=3.5cm, keepaspectratio]{images/logo/school_logo.png}}
+
+\AtBeginSection[]{ 
+    \begin{frame}{Outline} 
+        \tableofcontents[currentsection] 
+    \end{frame} }
+
+\title[Capstone Project Introduction]{Review 1\\PROJ2999 Capstone Project Introduction}
+\subtitle{Title of the Project}
+\author[Team No.]{Names of Team Members, Reg No. and Guide Name (As per GITAM record) }
+\institute[GSCSE, GITAM]{Department of Computer Science and Systems Engineering\\GITAM School of CSE\\GITAM Deemed to be University, Visakhapatnam}
+
+\titlegraphic{\includegraphics[width=5cm]{images/logo/school_logo.png}}
+
+\begin{document}
+{\logo{}
+\begin{frame}
+\titlepage
+\end{frame}
+}
+
+\section{Introduction}
+\input{segments/1_intro}
+
+\section{Literature Review}
+\input{segments/2i_lit_review_Paper1}
+
+\section{Literature Review (Paper 1)}
+\input{segments/2_LitReviewTemplate}
+
+\section{Summary of Literature Review}
+\input{segments/2_lit}
+
+\section{Research Gaps}
+\input{segments/3_gaps}
+
+\section{Problem Statement}
+\input{segments/4_prob}
+
+\section{Research Objectives}
+\input{segments/5_obj}
+
+\section{Workplan and Proposed Timeline}
+\input{segments/7_time}
+
+\section{Action Plan}
+\input{segments/8_conclude}
+
+
+\section*{References}
+\begin{frame}
+    \frametitle{References}
+    References in the IEEE format as follows:
+    \bibliographystyle{ieeetr}
+\bibliography{ref}
+\end{frame}
+
+\section{Disclosure Statements}
+\input{segments/9_disclosure}
+
+\end{document}

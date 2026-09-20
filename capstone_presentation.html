@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 1 – PROJ2999 Capstone Project Introduction</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gitam-green: #007367;
+    --gitam-green-light: #00a89d;
+    --gitam-green-dark: #005a50;
+    --gitam-green-bg: #f0faf8;
+    --gitam-gold: #c8a951;
+    --text-dark: #1a2332;
+    --text-mid: #3d4f5f;
+    --text-light: #6b7c8d;
+    --shadow-sm: 0 2px 8px rgba(0,115,103,0.08);
+    --shadow-md: 0 4px 20px rgba(0,115,103,0.12);
+  }
+
+  .reveal {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 18px;
+    color: var(--text-dark);
+  }
+  .reveal .slides { text-align: left; }
+  .reveal .slides section {
+    padding: 24px 50px 55px 50px;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    height: 100%;
+  }
+
+  /* ── Hide Reveal default controls & progress ── */
+  .reveal .controls { display: none !important; }
+
+  /* ── FOOTER BAR (on every slide) ── */
+  .slide-footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    display: flex;
+    font-size: 0.55em;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+  }
+  .slide-footer-bar .footer-left {
+    background: var(--gitam-green-dark);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    flex: 0 0 28%;
+  }
+  .slide-footer-bar .footer-center {
+    background: var(--gitam-green);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30%;
+  }
+  .slide-footer-bar .footer-right {
+    background: var(--gitam-green-light);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  .slide-footer-bar .footer-page {
+    background: var(--gitam-green-dark);
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 8%;
+  }
+
+  /* ── GITAM LOGO bottom-right (on every content slide) ── */
+  .slide-logo-br {
+    position: absolute;
+    bottom: 34px;
+    right: 16px;
+    height: 38px;
+    z-index: 5;
+    opacity: 0.85;
+  }
+
+  /* ═══════ TITLE SLIDE ═══════ */
+  .title-slide {
+    position: relative;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white !important;
+    padding: 20px 50px 55px 50px !important;
+  }
+  .title-slide .review-text {
+    font-family: 'Inter', serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--gitam-green);
+    margin-bottom: 2px;
+  }
+  .title-slide .proj-text {
+    font-family: 'Inter', serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--gitam-green);
+    margin-bottom: 6px;
+  }
+  .title-slide .project-title {
+    font-family: 'Inter', serif;
+    font-size: 0.95em;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gitam-green-light);
+    margin-bottom: 24px;
+  }
+  .title-slide .team-info {
+    font-size: 0.72em;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .title-slide .dept-info {
+    font-size: 0.62em;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .title-slide .date-text {
+    font-size: 0.85em;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+  }
+  .title-slide .title-logo {
+    height: 55px;
+  }
+
+  /* ═══════ SLIDE HEADER ═══════ */
+  .slide-header {
+    border-bottom: 2px solid var(--gitam-green);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  .slide-header h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.35em;
+    color: var(--gitam-green);
+    margin: 0;
+    text-transform: none;
+  }
+
+  /* ═══════ OUTLINE ═══════ */
+  .outline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .outline-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f6f8f7;
+    border-radius: 6px;
+    border-left: 3px solid var(--gitam-green);
+    font-size: 0.78em;
+    color: var(--text-mid);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .outline-item:hover {
+    background: var(--gitam-green-bg);
+    transform: translateX(4px);
+    color: var(--gitam-green-dark);
+  }
+  .outline-num {
+    background: var(--gitam-green);
+    color: white;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.68em;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ═══════ CONTENT CARDS ═══════ */
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #e4ebe8;
+  }
+  .card-green {
+    background: var(--gitam-green-bg);
+    border-color: #c0ddd8;
+  }
+  .card-accent {
+    background: linear-gradient(135deg, var(--gitam-green), var(--gitam-green-light));
+    color: white;
+    border: none;
+  }
+  .card h3 {
+    font-size: 0.82em;
+    font-weight: 700;
+    color: var(--gitam-green);
+    margin: 0 0 6px 0;
+  }
+  .card-accent h3 { color: white; }
+  .card p, .card li {
+    font-size: 0.7em;
+    line-height: 1.5;
+    color: var(--text-mid);
+    margin: 0;
+  }
+  .card-accent p, .card-accent li { color: rgba(255,255,255,0.92); }
+  .card ul { padding-left: 16px; margin: 4px 0; }
+
+  /* ═══════ LAYOUTS ═══════ */
+  .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .cols-3-wide { display: grid; grid-template-columns: 0.8fr 1.2fr 0.8fr; gap: 10px; }
+
+  /* ═══════ TABLES ═══════ */
+  .reveal table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.6em;
+    margin: 6px 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .reveal table thead th {
+    background: var(--gitam-green);
+    color: white;
+    padding: 7px 8px;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+  }
+  .reveal table tbody td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #e4ebe8;
+    vertical-align: top;
+    color: var(--text-mid);
+  }
+  .reveal table tbody tr:nth-child(even) { background: #f8fafb; }
+  .reveal table tbody tr:hover { background: var(--gitam-green-bg); }
+
+  /* ═══════ TAGS ═══════ */
+  .tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 50px;
+    font-size: 0.62em;
+    font-weight: 600;
+    margin: 2px;
+  }
+  .tag-green { background: var(--gitam-green-bg); color: var(--gitam-green); border: 1px solid #b0d8d2; }
+  .tag-filled { background: var(--gitam-green); color: white; }
+
+  /* ═══════ STAT BOXES ═══════ */
+  .stat-box {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-box .num {
+    font-size: 1.6em;
+    font-weight: 800;
+    color: var(--gitam-green);
+    line-height: 1;
+  }
+  .stat-box .label {
+    font-size: 0.6em;
+    color: var(--text-light);
+    margin-top: 3px;
+  }
+
+  /* ═══════ GANTT ═══════ */
+  .gantt-table td.filled { background: var(--gitam-green) !important; }
+  .gantt-table td.filled-light { background: var(--gitam-green-light) !important; }
+  .gantt-table td.filled-planned {
+    background: repeating-linear-gradient(45deg, var(--gitam-green-bg), var(--gitam-green-bg) 3px, #c8e6e3 3px, #c8e6e3 6px) !important;
+  }
+
+  /* ═══════ ALERT BLOCKS ═══════ */
+  .alert-block {
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 6px 0;
+  }
+  .alert-block.info {
+    background: var(--gitam-green-bg);
+    border-left: 4px solid var(--gitam-green);
+  }
+  .alert-block h4 {
+    font-size: 0.78em;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+    color: var(--gitam-green-dark);
+  }
+  .alert-block p {
+    font-size: 0.68em;
+    line-height: 1.5;
+    color: var(--text-mid);
+    margin: 0;
+  }
+
+  /* ═══════ GAP CARDS ═══════ */
+  .gap-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px 12px;
+    border-left: 4px solid;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 7px;
+  }
+  .gap-card h4 {
+    font-size: 0.72em;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    color: var(--text-dark);
+  }
+  .gap-card p {
+    font-size: 0.62em;
+    color: var(--text-mid);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* ═══════ SITUATION CARDS ═══════ */
+  .sit-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+  }
+  .sit-card {
+    background: white;
+    border-radius: 6px;
+    padding: 9px 7px;
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid var(--gitam-green);
+    text-align: center;
+  }
+  .sit-card .sit-title {
+    font-size: 0.6em;
+    font-weight: 700;
+    color: var(--gitam-green-dark);
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+  .sit-card .sit-desc {
+    font-size: 0.48em;
+    color: var(--text-light);
+    line-height: 1.25;
+  }
+
+  /* ═══════ TOOL CARDS ═══════ */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+  }
+  .tool-card {
+    background: white;
+    border-radius: 6px;
+    padding: 9px 7px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+  .tool-card .tool-name {
+    font-size: 0.66em;
+    font-weight: 700;
+    color: var(--gitam-green-dark);
+    margin-bottom: 2px;
+  }
+  .tool-card .tool-purpose {
+    font-size: 0.48em;
+    color: var(--text-light);
+    line-height: 1.25;
+  }
+
+  /* ═══════ EXISTING WORK CARDS ═══════ */
+  .ew-card {
+    background: white;
+    border-radius: 6px;
+    padding: 9px;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+  }
+  .ew-card h4 {
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--gitam-green);
+    margin: 0 0 5px 0;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--gitam-green-bg);
+  }
+  .ew-card ul { padding-left: 14px; margin: 0; }
+  .ew-card li {
+    font-size: 0.56em;
+    line-height: 1.4;
+    color: var(--text-mid);
+    margin-bottom: 1px;
+  }
+
+  /* ═══════ DISCLOSURE ═══════ */
+  .disclosure-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .disclosure-icon {
+    width: 26px; height: 26px;
+    background: var(--gitam-green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 0.65em;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .disclosure-text {
+    font-size: 0.7em;
+    line-height: 1.6;
+    color: var(--text-mid);
+  }
+
+  /* ═══════ FULLSCREEN TOGGLE (SLIDE 1 ONLY) ═══════ */
+  .fullscreen-btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.3;
+    color: var(--text-dark);
+    transition: opacity 0.2s ease, background 0.2s ease, transform 0.15s ease;
+    z-index: 100;
+    padding: 0;
+  }
+  .fullscreen-btn:hover {
+    opacity: 0.85;
+    background: rgba(0, 0, 0, 0.08);
+    transform: scale(1.06);
+  }
+
+  /* ═══════ PRINT / PDF EXPORT ═══════ */
+  @media print {
+    .reveal .slides section {
+      page-break-after: always;
+      border: 2px solid #333;
+    }
+    .fullscreen-btn { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 1: TITLE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="title-slide" id="title">
+  <!-- View Large / Small (Fullscreen) toggle icon (Slide 1 only) -->
+  <button class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullScreen()" title="View Large (Fullscreen)" aria-label="Toggle Fullscreen">
+    <svg class="fs-icon-expand" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <polyline points="9 21 3 21 3 15"></polyline>
+      <line x1="21" y1="3" x2="14" y2="10"></line>
+      <line x1="3" y1="21" x2="10" y2="14"></line>
+    </svg>
+    <svg class="fs-icon-compress" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <polyline points="4 14 10 14 10 20"></polyline>
+      <polyline points="20 10 14 10 14 4"></polyline>
+      <line x1="14" y1="10" x2="21" y2="3"></line>
+      <line x1="3" y1="21" x2="10" y2="14"></line>
+    </svg>
+  </button>
+  <div class="review-text">Review 1</div>
+  <div class="proj-text">PROJ2999 Capstone Project Introduction</div>
+  <div class="project-title">Smartphone-Based AI-Powered Navigation Assistant for Visually Impaired Individuals</div>
+
+  <div class="team-info">
+    Gavara Vishnu Vardhan (2023000810) &nbsp;&bull;&nbsp;
+    Salapu Shanmukha Vardhan (2023008203)<br>
+    Vattikuti Yagna Deepika (2023002813) &nbsp;&bull;&nbsp;
+    Azeema Jafar Jeelani (2023001213)<br>
+    <span style="font-weight:400;font-size:0.9em;">Guide: Suraj Aravind Bollapragada (120035)</span>
+  </div>
+
+  <div class="dept-info">
+    Department of Computer Science and Systems Engineering<br>
+    GITAM School of CSE<br>
+    GITAM Deemed to be University, Visakhapatnam
+  </div>
+
+  <div class="date-text">September 20, 2026</div>
+
+  <img src="school_logo.png" alt="GITAM Logo" class="title-logo">
+
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">1 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 2: OUTLINE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="outline">
+  <div class="slide-header"><h2>Outline</h2></div>
+  <div class="outline-grid">
+    <a class="outline-item" href="#/intro1"><span class="outline-num">1</span> Introduction</a>
+    <a class="outline-item" href="#/problem"><span class="outline-num">6</span> Problem Statement</a>
+    <a class="outline-item" href="#/litreview"><span class="outline-num">2</span> Literature Review</a>
+    <a class="outline-item" href="#/objectives"><span class="outline-num">7</span> Research Objectives</a>
+    <a class="outline-item" href="#/ew-smartcane"><span class="outline-num">3</span> Existing Work Review</a>
+    <a class="outline-item" href="#/tools"><span class="outline-num">8</span> Proposed Tools &amp; Technologies</a>
+    <a class="outline-item" href="#/summary"><span class="outline-num">4</span> Summary of Literature Review</a>
+    <a class="outline-item" href="#/workplan"><span class="outline-num">9</span> Workplan &amp; Timeline</a>
+    <a class="outline-item" href="#/gaps"><span class="outline-num">5</span> Research Gaps</a>
+    <a class="outline-item" href="#/disclosure"><span class="outline-num">10</span> Disclosure Statements</a>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">2 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 3: INTRODUCTION (1/2) -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="intro1">
+  <div class="slide-header"><h2>Introduction</h2></div>
+  <div class="cols-2">
+    <div>
+      <div class="card card-green" style="margin-bottom:10px;">
+        <h3>The Problem</h3>
+        <p>Visually impaired individuals face significant daily challenges in independent mobility and navigation, especially in unstructured Indian road environments. Current assistive tools like the traditional white cane provide limited obstacle awareness with no contextual understanding of the surroundings.</p>
+      </div>
+      <div class="card">
+        <h3>Current Reality</h3>
+        <ul>
+          <li>Person listens to traffic or asks someone for help when crossing a busy road</li>
+          <li>White cane detects some obstacles on footpaths but cannot identify them</li>
+          <li>Potholes and broken roads are difficult to identify before stepping into them</li>
+          <li>Cannot visually read road signs, bus numbers, or destination boards</li>
+          <li>Finding specific places like bus stops, hospitals, or pharmacies requires asking others</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card card-accent" style="margin-bottom:10px;">
+        <h3>Our Approach</h3>
+        <p>A smartphone-based application that leverages AI, computer vision, and GPS to provide real-time obstacle detection, scene understanding, navigation guidance, and voice interaction — all without requiring specialised or expensive hardware.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <div class="stat-box"><div class="num">10+</div><div class="label">Real-world situations addressed</div></div>
+        <div class="stat-box"><div class="num">15</div><div class="label">Tools &amp; technologies planned</div></div>
+        <div class="stat-box"><div class="num">9</div><div class="label">Existing systems reviewed</div></div>
+        <div class="stat-box"><div class="num">5</div><div class="label">Research papers surveyed</div></div>
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">3 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 4: SITUATIONS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="intro2">
+  <div class="slide-header"><h2>Real-World Situations Addressed</h2></div>
+  <div class="sit-grid">
+    <div class="sit-card">
+      <div class="sit-title">Crossing a Busy Road</div>
+      <div class="sit-desc">Detects approaching vehicles and gives directional warnings</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Walking on Footpath</div>
+      <div class="sit-desc">Camera + sensors detect people, bikes, poles, vehicles</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Potholes / Broken Roads</div>
+      <div class="sit-desc">Computer vision detects potholes and uneven surfaces</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Motorcycles Approaching</div>
+      <div class="sit-desc">Detects vehicle and warns direction of approach</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Blocked Footpaths</div>
+      <div class="sit-desc">Detects parked bikes, garbage, construction material, vendors</div>
+    </div>
+  </div>
+  <div class="sit-grid" style="margin-top:7px;">
+    <div class="sit-card">
+      <div class="sit-title">Crowded Streets</div>
+      <div class="sit-desc">Detects nearby pedestrians and obstacles in markets</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Finding a Bus Stop</div>
+      <div class="sit-desc">GPS + vision help locate the bus stop/sign</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Reading Road Signs</div>
+      <div class="sit-desc">OCR reads text and speaks it aloud</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Construction Areas</div>
+      <div class="sit-desc">Detects construction obstacles and alerts the user</div>
+    </div>
+    <div class="sit-card">
+      <div class="sit-title">Finding Important Places</div>
+      <div class="sit-desc">GPS navigates to hospitals, pharmacies, police stations</div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">4 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 5: LITERATURE REVIEW -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="litreview">
+  <div class="slide-header"><h2>Literature Review</h2></div>
+  <div class="alert-block info">
+    <h4>Approach</h4>
+    <p>5 full-length journal and IEEE publications were reviewed covering smartphone-based assistive technologies, accessibility features, systematic literature reviews, and current advancements for visually impaired individuals. Additionally, 9 existing systems/products were analysed for features and limitations.</p>
+  </div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Title</th><th>Authors</th><th>Year</th><th>Publisher / Journal</th><th>DOI</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Smartphones-Based Assistive Technology: Accessibility Features and Apps for People with Visual Impairment</td>
+        <td>S. S. Senjam, S. Manna, C. Bascaran</td>
+        <td>2021</td>
+        <td>Dovepress (Taylor &amp; Francis)</td>
+        <td>10.2147/OPTO.S336361</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Smartphones as assistive technology for visual impairment</td>
+        <td>S. S. Senjam</td>
+        <td>2021</td>
+        <td>Royal College of Ophthalmologists</td>
+        <td>10.1038/s41433-021-01499-w</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Assistive Technology for Visually Impaired Individuals: A Systematic Literature Review</td>
+        <td>L. Manirajee, S. Q. H. Shariff, S. Meeze, M. Rashid</td>
+        <td>2024</td>
+        <td>IJARBSS</td>
+        <td>10.6007/IJARBSS/v14-i2/20827</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Assistive systems for visually impaired people: A survey on current requirements and advancements</td>
+        <td>P. Kathiria, S. H. Mankad, J. Patel, M. Kapadia, N. Lakdawala</td>
+        <td>2024</td>
+        <td>Neurocomputing</td>
+        <td>10.1016/j.neucom.2024.128284</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Exploring the use of smartphones and tablets among people with visual impairments</td>
+        <td>N. Martiniello, W. Eisenbarth, C. Lehane, A. Johnson, W. Wittich</td>
+        <td>2019</td>
+        <td>Assistive Technology</td>
+        <td>10.1080/10400435.2019.1682084</td>
+      </tr>
+    </tbody>
+  </table>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">5 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 6: EXISTING WORK – SmartCane -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="ew-smartcane">
+  <div class="slide-header"><h2>Existing Work Review – SmartCane</h2></div>
+  <div class="cols-3-wide">
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Developed By</h4>
+        <p style="font-size:0.6em;color:var(--text-mid);">AssisTech Lab, IIT Delhi with Phoenix Medical Systems and Saksham Trust</p>
+      </div>
+      <div class="ew-card">
+        <h4>Key Features</h4>
+        <ul>
+          <li>Ultrasonic obstacle detection</li>
+          <li>Detects obstacles from knee to head level</li>
+          <li>Detects overhanging/protruding obstacles</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card">
+        <h4>Methodology &amp; Technology</h4>
+        <ul>
+          <li>Provides distance information through vibration patterns</li>
+          <li>Works with a conventional white cane</li>
+          <li>Rechargeable electronic travel aid</li>
+          <li>Ultrasonic sensing technology</li>
+          <li>Haptic (vibration) feedback</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag tag-green">Ultrasonic</span>
+          <span class="tag tag-green">Haptic</span>
+          <span class="tag tag-green">Wearable</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Limitations</h4>
+        <ul>
+          <li>Mainly detects obstacle presence/distance</li>
+          <li>Limited object identification</li>
+          <li>No comprehensive scene understanding</li>
+          <li>No GPS-based navigation</li>
+          <li>No detailed voice-based route guidance</li>
+          <li>Cannot interpret complex road situations</li>
+        </ul>
+      </div>
+      <div style="font-size:0.5em;color:var(--text-light);padding:3px 5px;">
+        <strong>Source:</strong> Official SmartCane – IIT Delhi / AssisTech
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">6 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 7: EXISTING WORK – MAVI -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="ew-mavi">
+  <div class="slide-header"><h2>Existing Work Review – MAVI</h2></div>
+  <div class="cols-3-wide">
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Developed By</h4>
+        <p style="font-size:0.6em;color:var(--text-mid);">IIT Delhi, with research collaboration involving IIIT Delhi</p>
+      </div>
+      <div class="ew-card">
+        <h4>Key Features</h4>
+        <ul>
+          <li>Supports independent mobility</li>
+          <li>Camera-based environmental perception</li>
+          <li>Computer vision and object detection</li>
+          <li>Supports local and cloud computing</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card">
+        <h4>Methodology &amp; Technology</h4>
+        <ul>
+          <li>Provides environmental information to users</li>
+          <li>Designed for unstructured environments</li>
+          <li>Uses AI/computer vision for mobility</li>
+          <li>Camera-based sensing</li>
+          <li>Cloud + local processing</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag tag-green">Computer Vision</span>
+          <span class="tag tag-green">Cloud</span>
+          <span class="tag tag-green">AI</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Limitations</h4>
+        <ul>
+          <li>Research-oriented system</li>
+          <li>CV affected by lighting conditions</li>
+          <li>Significant computational resources needed</li>
+          <li>Cloud processing depends on connectivity</li>
+          <li>Potential latency in cloud processing</li>
+          <li>Does not cover complete outdoor navigation</li>
+        </ul>
+      </div>
+      <div style="font-size:0.5em;color:var(--text-light);padding:3px 5px;">
+        <strong>Source:</strong> MAVI Research Paper – IIT Delhi
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">7 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 8: EXISTING WORK – DRISHTI -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="ew-drishti">
+  <div class="slide-header"><h2>Existing Work Review – DRISHTI</h2></div>
+  <div class="cols-3-wide">
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Developed By</h4>
+        <p style="font-size:0.6em;color:var(--text-mid);">Ajay Kumar Garg Engineering College, Ghaziabad</p>
+      </div>
+      <div class="ew-card">
+        <h4>Key Features</h4>
+        <ul>
+          <li>Camera-based visual assistance</li>
+          <li>AI/computer-vision based perception</li>
+          <li>Detects obstacles/environmental info</li>
+          <li>Provides audio feedback</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card">
+        <h4>Methodology &amp; Technology</h4>
+        <ul>
+          <li>Uses ESP32-based hardware</li>
+          <li>Bluetooth communication</li>
+          <li>Smartphone for processing/assistance</li>
+          <li>Audio feedback system</li>
+          <li>Designed as a low-cost assistive solution</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag tag-green">ESP32</span>
+          <span class="tag tag-green">Bluetooth</span>
+          <span class="tag tag-green">Low-Cost</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Limitations</h4>
+        <ul>
+          <li>Early proof-of-concept/research system</li>
+          <li>Limited compared with complete navigation</li>
+          <li>Camera performance affected by conditions</li>
+          <li>Requires computational resources</li>
+          <li>Limited road-context understanding</li>
+          <li>Needs further development for Indian roads</li>
+        </ul>
+      </div>
+      <div style="font-size:0.5em;color:var(--text-light);padding:3px 5px;">
+        <strong>Source:</strong> DRISHTI Research Paper – arXiv
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">8 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 9: EXISTING WORK – Echo-Vision -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="ew-echovision">
+  <div class="slide-header"><h2>Existing Work Review – Echo-Vision</h2></div>
+  <div class="cols-3-wide">
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Developed By</h4>
+        <p style="font-size:0.6em;color:var(--text-mid);">SRM Institute of Science and Technology, India, in collaboration with India Grama Munnetra Iyakkam</p>
+      </div>
+      <div class="ew-card">
+        <h4>Key Features</h4>
+        <ul>
+          <li>Smart glasses for visually impaired users</li>
+          <li>Deep learning and computer vision</li>
+          <li>LiDAR sensors for obstacle detection</li>
+          <li>Haptic feedback through vibrations</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card">
+        <h4>Methodology &amp; Technology</h4>
+        <ul>
+          <li>Creates information about nearby obstacles</li>
+          <li>GPS-based navigation</li>
+          <li>Text-to-speech directions</li>
+          <li>Combines obstacle awareness and navigation</li>
+          <li>LiDAR + deep learning pipeline</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag tag-green">LiDAR</span>
+          <span class="tag tag-green">Deep Learning</span>
+          <span class="tag tag-green">GPS</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Limitations</h4>
+        <ul>
+          <li>Requires specialised wearable hardware</li>
+          <li>LiDAR increases hardware cost/complexity</li>
+          <li>Battery/power requirements</li>
+          <li>Relatively recent student-developed system</li>
+          <li>Requires further real-world validation</li>
+        </ul>
+      </div>
+      <div style="font-size:0.5em;color:var(--text-light);padding:3px 5px;">
+        <strong>Source:</strong> IEEE EPICS – Echo-Vision
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">9 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 10: EXISTING WORK – VisionMate -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="ew-visionmate">
+  <div class="slide-header"><h2>Existing Work Review – VisionMate</h2></div>
+  <div class="cols-3-wide">
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Developed By</h4>
+        <p style="font-size:0.6em;color:var(--text-mid);">Anson Jaison / APJ Abdul Kalam Technological University student project</p>
+      </div>
+      <div class="ew-card">
+        <h4>Key Features</h4>
+        <ul>
+          <li>AI-powered wearable/mobile assistant</li>
+          <li>Real-time obstacle detection</li>
+          <li>Object recognition (400+ categories)</li>
+          <li>OCR/text reading</li>
+          <li>GPS navigation with turn-by-turn audio</li>
+          <li>SOS/emergency location sharing</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card">
+        <h4>Methodology &amp; Technology</h4>
+        <ul>
+          <li>Reads signs and printed text aloud</li>
+          <li>Turn-by-turn audio directions</li>
+          <li>Automatic route recalculation</li>
+          <li>Audio-first interface</li>
+          <li>ML Kit for object recognition</li>
+          <li>GPS + maps integration</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag tag-green">ML Kit</span>
+          <span class="tag tag-green">OCR</span>
+          <span class="tag tag-green">GPS</span>
+          <span class="tag tag-green">SOS</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ew-card" style="margin-bottom:8px;">
+        <h4>Limitations</h4>
+        <ul>
+          <li>Android-focused implementation</li>
+          <li>Depends heavily on smartphone capabilities</li>
+          <li>Camera detection affected by conditions</li>
+          <li>Requires GPS/network services</li>
+          <li>Primarily a student project, not widely deployed</li>
+        </ul>
+      </div>
+      <div style="font-size:0.5em;color:var(--text-light);padding:3px 5px;">
+        <strong>Source:</strong> VisionMate Project – Anson Jaison
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">10 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 11: SUMMARY TABLE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="summary">
+  <div class="slide-header"><h2>Summary of Existing Work Review</h2></div>
+  <table>
+    <thead>
+      <tr><th>#</th><th>System</th><th>Developer</th><th>Key Technology</th><th>Navigation</th><th>Scene Understanding</th><th>Key Limitation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>SmartCane</td><td>IIT Delhi / AssisTech</td><td>Ultrasonic sensing</td><td>No</td><td>No</td><td>Obstacle distance only, no identification</td></tr>
+      <tr><td>2</td><td>MAVI</td><td>IIT Delhi / IIIT Delhi</td><td>Camera + CV</td><td>Partial</td><td>Partial</td><td>Research-oriented, connectivity dependent</td></tr>
+      <tr><td>3</td><td>OnBoard</td><td>IIT Delhi / AssisTech</td><td>Wireless comm</td><td>No</td><td>No</td><td>Bus transport only, needs bus infrastructure</td></tr>
+      <tr><td>4</td><td>DRISHTI</td><td>AKGEC, Ghaziabad</td><td>ESP32 + Camera</td><td>No</td><td>Partial</td><td>Early prototype, limited road-context</td></tr>
+      <tr><td>5</td><td>Echo-Vision</td><td>SRM Institute</td><td>LiDAR + DL</td><td>GPS</td><td>Partial</td><td>Expensive specialised hardware (LiDAR)</td></tr>
+      <tr><td>6</td><td>Path Navigator</td><td>KL University, AP</td><td>GPS + sensors</td><td>GPS</td><td>No</td><td>Complex hardware requirements</td></tr>
+      <tr><td>7</td><td>ALVU</td><td>MIT CSAIL</td><td>LiDAR/ToF array</td><td>No</td><td>No</td><td>Local obstacle awareness only, no GPS</td></tr>
+      <tr><td>8</td><td>VisionMate</td><td>APJ Abdul Kalam TU</td><td>ML Kit + GPS</td><td>GPS</td><td>OCR</td><td>Android-only, student project scale</td></tr>
+      <tr><td>9</td><td>IoT Vision-Aid</td><td>Varuna Kumara et al.</td><td>Arduino + Ultrasonic</td><td>GPS</td><td>No</td><td>No AI-based object recognition</td></tr>
+    </tbody>
+  </table>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">11 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 12: RESEARCH GAPS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="gaps">
+  <div class="slide-header"><h2>Research Gaps</h2></div>
+  <div class="alert-block info" style="margin-bottom:10px;">
+    <h4>Summary of Literature Review Observations</h4>
+    <p>While several assistive systems exist for visually impaired individuals, most are limited in scope — either focusing solely on obstacle detection without navigation, requiring expensive specialised hardware, or lacking comprehensive scene understanding for complex Indian road environments.</p>
+  </div>
+  <div class="cols-2">
+    <div>
+      <div class="gap-card" style="border-left-color:#d04040;">
+        <h4>Gap 1: Expensive Specialised Hardware</h4>
+        <p>Most existing systems (SmartCane, Echo-Vision, ALVU, IoT Vision-Aid) require dedicated hardware like LiDAR sensors, ultrasonic modules, smart glasses, or Arduino controllers — increasing cost and reducing accessibility for users in developing countries.</p>
+      </div>
+      <div class="gap-card" style="border-left-color:#e8a020;">
+        <h4>Gap 2: Limited Scene Understanding</h4>
+        <p>Existing solutions primarily detect obstacle presence/distance but lack rich semantic scene understanding. No reviewed system uses modern Vision-Language Models (e.g., Gemini API) to provide contextual descriptions of the environment.</p>
+      </div>
+    </div>
+    <div>
+      <div class="gap-card" style="border-left-color:#2080d0;">
+        <h4>Gap 3: No End-to-End Integrated Solution</h4>
+        <p>No single reviewed system combines real-time object detection (YOLO), AI-powered scene understanding (VLM), GPS navigation, OCR text reading, voice interaction (STT/TTS), and emergency features in one smartphone-based application.</p>
+      </div>
+      <div class="gap-card" style="border-left-color:var(--gitam-green);">
+        <h4>Gap 4: Unstructured Indian Road Contexts</h4>
+        <p>Most systems are designed for structured environments. Indian roads present unique challenges — potholes, blocked footpaths, mixed traffic, vendors, construction zones — that are not adequately addressed by existing solutions.</p>
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">12 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 13: PROBLEM STATEMENT -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="problem">
+  <div class="slide-header"><h2>Problem Statement</h2></div>
+  <div style="max-width:820px;margin:30px auto;">
+    <div class="card card-accent" style="padding:26px 30px;text-align:center;">
+      <p style="font-size:0.86em;line-height:1.75;color:white;">
+        Visually impaired individuals face significant challenges in independent navigation, especially in unstructured Indian road environments characterised by potholes, mixed traffic, blocked footpaths, and complex intersections. Current assistive technologies either require <strong>expensive specialised hardware</strong> (LiDAR, ultrasonic sensors, smart glasses) or provide <strong>limited functionality</strong> — detecting obstacles without contextual understanding. There is a critical need for an <strong>affordable, smartphone-based assistive navigation system</strong> that combines real-time object detection, AI-powered scene understanding, GPS navigation, text recognition, and voice interaction to enable safe, independent mobility.
+      </p>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">13 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 14: RESEARCH OBJECTIVES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="objectives">
+  <div class="slide-header"><h2>Research Objectives</h2></div>
+  <div style="max-width:830px;margin:8px auto;">
+    <div class="card card-green" style="padding:18px 22px;">
+      <h3 style="text-align:center;font-size:0.88em;margin-bottom:12px;">Well-defined objectives addressing the identified research gaps</h3>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:var(--gitam-green);color:white;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75em;">1</div>
+          <div>
+            <div style="font-weight:700;font-size:0.8em;color:var(--gitam-green-dark);margin-bottom:2px;">Develop a cross-platform smartphone application</div>
+            <div style="font-size:0.7em;color:var(--text-mid);">Build a React Native (Expo) application that provides real-time obstacle detection and navigation assistance for visually impaired users — eliminating the need for expensive specialised hardware.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:var(--gitam-green);color:white;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75em;">2</div>
+          <div>
+            <div style="font-weight:700;font-size:0.8em;color:var(--gitam-green-dark);margin-bottom:2px;">Integrate AI-powered object detection and scene understanding</div>
+            <div style="font-size:0.7em;color:var(--text-mid);">Implement YOLO-based real-time detection for vehicles, pedestrians, potholes, and obstacles; and integrate the Gemini API (Vision-Language Model) for contextual scene interpretation and intelligent assistance.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:var(--gitam-green);color:white;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75em;">3</div>
+          <div>
+            <div style="font-weight:700;font-size:0.8em;color:var(--gitam-green-dark);margin-bottom:2px;">Enable GPS-based navigation with voice-guided interaction</div>
+            <div style="font-size:0.7em;color:var(--text-mid);">Provide turn-by-turn audio directions using GPS + Maps integration, OCR for reading signs/text aloud, and full voice interaction via Speech-to-Text and Text-to-Speech — creating a completely audio-first interface.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">14 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 15: TOOLS & TECHNOLOGIES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="tools">
+  <div class="slide-header"><h2>Proposed Tools &amp; Technologies</h2></div>
+  <div class="tool-grid">
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green);">
+      <div class="tool-name">React Native</div>
+      <div class="tool-purpose">Cross-platform mobile app UI &amp; logic</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green);">
+      <div class="tool-name">Expo</div>
+      <div class="tool-purpose">Camera, GPS, microphone, audio access</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green);">
+      <div class="tool-name">TypeScript</div>
+      <div class="tool-purpose">Type-safe application development</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green);">
+      <div class="tool-name">Python</div>
+      <div class="tool-purpose">AI/CV model development &amp; processing</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green);">
+      <div class="tool-name">YOLO</div>
+      <div class="tool-purpose">Real-time object detection</div>
+    </div>
+  </div>
+  <div class="tool-grid" style="margin-top:7px;">
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green-light);">
+      <div class="tool-name">OpenCV</div>
+      <div class="tool-purpose">Image/video processing &amp; CV ops</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green-light);">
+      <div class="tool-name">Gemini API</div>
+      <div class="tool-purpose">Vision-Language Model scene understanding</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green-light);">
+      <div class="tool-name">GPS</div>
+      <div class="tool-purpose">User location &amp; navigation</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green-light);">
+      <div class="tool-name">Maps API</div>
+      <div class="tool-purpose">Google Maps / Mapbox / OSM routes</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-green-light);">
+      <div class="tool-name">STT &amp; TTS</div>
+      <div class="tool-purpose">Voice input &amp; audio output</div>
+    </div>
+  </div>
+  <div class="tool-grid" style="margin-top:7px;">
+    <div class="tool-card" style="border-top:3px solid var(--gitam-gold);">
+      <div class="tool-name">Firebase / Supabase</div>
+      <div class="tool-purpose">Backend, database, cloud services</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-gold);">
+      <div class="tool-name">VS Code</div>
+      <div class="tool-purpose">Development environment</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-gold);">
+      <div class="tool-name">GitHub</div>
+      <div class="tool-purpose">Version control &amp; collaboration</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-gold);">
+      <div class="tool-name">ESP32</div>
+      <div class="tool-purpose">Optional external sensor controller</div>
+    </div>
+    <div class="tool-card" style="border-top:3px solid var(--gitam-gold);">
+      <div class="tool-name">OCR</div>
+      <div class="tool-purpose">Text recognition from signs/boards</div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">15 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 16: WORKPLAN & TIMELINE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="workplan">
+  <div class="slide-header"><h2>Workplan &amp; Task Allocation</h2></div>
+  <table>
+    <thead>
+      <tr><th>Task</th><th>Task Owner</th><th>% Completed</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tools &amp; Technology Research</td>
+        <td>Gavara Vishnu Vardhan (2023000810)</td>
+        <td>100%</td>
+        <td><span class="tag tag-filled">Done</span></td>
+      </tr>
+      <tr>
+        <td>Literature Review</td>
+        <td>Salapu Shanmukha Vardhan (2023008203)</td>
+        <td>100%</td>
+        <td><span class="tag tag-filled">Done</span></td>
+      </tr>
+      <tr>
+        <td>Real-World Situations Analysis</td>
+        <td>Vattikuti Yagna Deepika (2023002813)</td>
+        <td>100%</td>
+        <td><span class="tag tag-filled">Done</span></td>
+      </tr>
+      <tr>
+        <td>Documentation</td>
+        <td>Azeema Jafar Jeelani (2023001213)</td>
+        <td>100%</td>
+        <td><span class="tag tag-filled">Done</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="font-weight:600;font-size:0.82em;color:var(--gitam-green);margin-top:10px;margin-bottom:4px;">Proposed Timeline</div>
+  <table class="gantt-table">
+    <thead>
+      <tr><th>Task</th><th>Sept (W1-2)</th><th>Sept (W3-4)</th><th>Oct (W1-2)</th><th>Oct (W3-4)</th><th>Nov (W1-2)</th><th>Nov (W3-4)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Problem Identification</td><td class="filled"></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Literature Survey</td><td class="filled"></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Project Objectives</td><td></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Workplan</td><td></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Requirement Analysis</td><td></td><td></td><td class="filled-light"></td><td></td><td></td><td></td></tr>
+      <tr><td>Tools/Technology/Algorithms</td><td></td><td></td><td class="filled-light"></td><td class="filled-light"></td><td></td><td></td></tr>
+      <tr><td>System Design (DFD / UML)</td><td></td><td></td><td></td><td class="filled-planned"></td><td class="filled-planned"></td><td></td></tr>
+      <tr><td>Proposed Methodology</td><td></td><td></td><td></td><td></td><td class="filled-planned"></td><td class="filled-planned"></td></tr>
+      <tr><td>Closure of Phase 1</td><td></td><td></td><td></td><td></td><td></td><td class="filled-planned"></td></tr>
+    </tbody>
+  </table>
+  <div style="display:flex;gap:14px;margin-top:4px;font-size:0.5em;color:var(--text-light);">
+    <div><span style="display:inline-block;width:12px;height:8px;background:var(--gitam-green);border-radius:2px;"></span> Completed</div>
+    <div><span style="display:inline-block;width:12px;height:8px;background:var(--gitam-green-light);border-radius:2px;"></span> In Progress</div>
+    <div><span style="display:inline-block;width:12px;height:8px;background:repeating-linear-gradient(45deg,var(--gitam-green-bg),var(--gitam-green-bg) 2px,#c8e6e3 2px,#c8e6e3 4px);border-radius:2px;"></span> Planned</div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">16 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 17: ACTION PLAN -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="actionplan">
+  <div class="slide-header"><h2>Further Plan of Action</h2></div>
+  <div class="cols-2" style="margin-top:6px;">
+    <div>
+      <div class="card" style="margin-bottom:10px;">
+        <h3>Phase 1 – Completion (Oct 2026)</h3>
+        <ul>
+          <li>Complete detailed requirement analysis</li>
+          <li>Finalise selection of tools, technologies, and algorithms</li>
+          <li>Create system design documents (DFD / UML diagrams)</li>
+          <li>Define the proposed methodology and architecture</li>
+          <li>Set up the development environment (React Native + Expo)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Phase 2 – Development (Nov–Dec 2026)</h3>
+        <ul>
+          <li>Implement core mobile application (React Native/Expo)</li>
+          <li>Integrate YOLO-based object detection module</li>
+          <li>Integrate Gemini API for scene understanding</li>
+          <li>Implement GPS navigation and Maps integration</li>
+          <li>Build STT/TTS voice interaction pipeline</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:10px;">
+        <h3>Phase 3 – Testing (Jan 2027)</h3>
+        <ul>
+          <li>Unit testing of individual modules</li>
+          <li>Integration testing of the complete system</li>
+          <li>Field testing in real-world environments</li>
+          <li>User testing with visually impaired individuals</li>
+          <li>Performance and latency optimisation</li>
+        </ul>
+      </div>
+      <div class="card card-accent">
+        <h3>Phase 4 – Final Review (Feb 2027)</h3>
+        <ul>
+          <li>Compile final documentation and results</li>
+          <li>Prepare final presentation and demonstration</li>
+          <li>Publish findings (if applicable)</li>
+          <li>Project closure and submission</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">17 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 18: REFERENCES -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="references">
+  <div class="slide-header"><h2>References</h2></div>
+  <div style="font-size:0.65em;line-height:1.75;color:var(--text-mid);">
+    <p><strong>[1]</strong> S. S. Senjam, S. Manna, and C. Bascaran, "Smartphones-Based Assistive Technology: Accessibility Features and Apps for People with Visual Impairment," <em>Clinical Ophthalmology</em>, Dovepress (Taylor &amp; Francis Group), Nov. 2021. DOI: 10.2147/OPTO.S336361</p>
+    <p><strong>[2]</strong> S. S. Senjam, "Smartphones as assistive technology for visual impairment," <em>Eye</em>, The Royal College of Ophthalmologists, Mar. 2021. DOI: 10.1038/s41433-021-01499-w</p>
+    <p><strong>[3]</strong> L. Manirajee, S. Q. H. Shariff, S. Meeze, and M. Rashid, "Assistive Technology for Visually Impaired Individuals: A Systematic Literature Review (SLR)," <em>International Journal of Academic Research in Business &amp; Social Sciences</em>, vol. 14, no. 2, Feb. 2024. DOI: 10.6007/IJARBSS/v14-i2/20827</p>
+    <p><strong>[4]</strong> P. Kathiria, S. H. Mankad, J. Patel, M. Kapadia, and N. Lakdawala, "Assistive systems for visually impaired people: A survey on current requirements and advancements," <em>Neurocomputing</em>, Jul. 2024. DOI: 10.1016/j.neucom.2024.128284</p>
+    <p><strong>[5]</strong> N. Martiniello, W. Eisenbarth, C. Lehane, A. Johnson, and W. Wittich, "Exploring the use of smartphones and tablets among people with visual impairments: Are mainstream devices replacing the need for traditional assistive technology?," <em>Assistive Technology</em>, Nov. 2019. DOI: 10.1080/10400435.2019.1682084</p>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">18 / 19</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SLIDE 19: DISCLOSURE STATEMENTS -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section id="disclosure">
+  <div class="slide-header"><h2>Disclosure Statements</h2></div>
+  <div style="max-width:780px;margin:14px auto;">
+    <div class="disclosure-item">
+      <div class="disclosure-icon">1</div>
+      <div class="disclosure-text">I will maintain academic honesty by doing my own work and avoiding plagiarism, cheating, unauthorized collaboration, and falsifying information, use of AI Content.</div>
+    </div>
+    <div class="disclosure-item">
+      <div class="disclosure-icon">2</div>
+      <div class="disclosure-text">I will properly acknowledge and cite all sources I use, including information from the internet, books, software, and AI tools.</div>
+    </div>
+    <div class="disclosure-item">
+      <div class="disclosure-icon">3</div>
+      <div class="disclosure-text">I will use institutional resources responsibly and only for authorized academic or research activities. I understand that I am responsible for my own actions and decisions.</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px;">
+    <div style="font-size:0.85em;font-weight:700;color:var(--gitam-green);">Thank You</div>
+    <div style="font-size:0.6em;color:var(--text-light);margin-top:4px;">Team T1 &nbsp;|&nbsp; PROJ2999 Capstone Project &nbsp;|&nbsp; GITAM School of CSE</div>
+  </div>
+  <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
+  <div class="slide-footer-bar">
+    <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
+    <div class="footer-center">Capstone Project Introduction</div>
+    <div class="footer-right">September 20, 2026</div>
+    <div class="footer-page">19 / 19</div>
+  </div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
+<script>
+  Reveal.initialize({
+    width: 960,
+    height: 540,
+    margin: 0,
+    hash: true,
+    slideNumber: false,
+    controls: false,
+    progress: false,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    center: false,
+    plugins: []
+  });
+
+  function toggleFullScreen() {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      var elem = document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
+  function updateFsIcon() {
+    var isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+    var expandIcon = document.querySelector('.fullscreen-btn .fs-icon-expand');
+    var compressIcon = document.querySelector('.fullscreen-btn .fs-icon-compress');
+    var btn = document.getElementById('fullscreenBtn');
+    if (expandIcon && compressIcon) {
+      expandIcon.style.display = isFs ? 'none' : 'block';
+      compressIcon.style.display = isFs ? 'block' : 'none';
+    }
+    if (btn) {
+      btn.setAttribute('title', isFs ? 'View Small (Esc / Restore)' : 'View Large (Fullscreen)');
+    }
+  }
+
+  document.addEventListener('fullscreenchange', updateFsIcon);
+  document.addEventListener('webkitfullscreenchange', updateFsIcon);
+</script>
+
+</body>
+</html>
