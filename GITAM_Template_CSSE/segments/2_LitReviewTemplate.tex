@@ -1,152 +1,83 @@
 % Paper 1: Senjam et al. (Clinical Ophthalmology, 2021)
 \begin{frame}{Literature Review: Smartphones-Based Assistive Technology}
+{\large\textbf{\textcolor{MyUnivGreen}{S. S. Senjam et al. (Clinical Ophthalmology, 2021) \cite{senjam2021smartphones}}}}\\[6pt]
+
 \begin{columns}[T]
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Paper Overview \cite{senjam2021smartphones}}
-      \textbf{Authors:} S. S. Senjam et al.\\
-      \textbf{Journal:} Clinical Ophthalmology (2021)\\
-      \textbf{Focus:} Evaluation of built-in smartphone features and assistive apps for visually impaired persons.
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Main Contributions}
-      \begin{itemize}
-        \item Categorised smartphone accessibility apps for vision assistance.
-        \item Evaluated screen readers, magnification, and AI scene description.
-      \end{itemize}
-    \end{block}
-  \end{column}
-    
-  \begin{column}{0.34\textwidth}
-    \begin{block}{Methodology \& Technology}
-      \begin{itemize}
-        \item Smartphone-based computer vision and sensor fusion.
-        \item Evaluated apps like Seeing AI, Envision, and Google Lookout.
-        \item Audio/speech interface for feedback.
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Inputs \& Outputs}
-      \textbf{Input:} RGB camera stream, touch gestures, voice commands.\\
-      \textbf{Output:} Synthesized speech, haptic cues.
-    \end{block}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Contributions \& Methodology}}\\[4pt]
+    \begin{itemize}
+      \item Evaluated smartphone accessibility apps (Seeing AI, Google Lookout).
+      \item Investigated computer vision and sensor fusion on mobile hardware.
+      \item Evaluated audio/speech interface for non-visual environmental feedback.
+      \item Demonstrated $>70\%$ improvement in daily task autonomy.
+    \end{itemize}
   \end{column}
   
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Summary of Results}
-      \begin{itemize}
-        \item Over 70\% improvement in independent daily task execution.
-        \item Validated smartphone as a primary assistive medium.
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{alertblock}{Key Limitations}
-      \begin{itemize}
-        \item Limited real-time navigation guidance in unstructured road settings.
-        \item High dependency on cloud network connectivity.
-      \end{itemize}
-    \end{alertblock}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Inputs, Outputs \& Limitations}}\\[4pt]
+    \begin{itemize}
+      \item \textbf{Input:} Mobile camera stream, touch gestures, voice input.
+      \item \textbf{Output:} Synthesized speech and haptic notifications.
+      \item \textbf{Limitation 1:} Limited real-time navigation on Indian roads.
+      \item \textbf{Limitation 2:} Heavy dependency on continuous cloud connectivity.
+      \item \textbf{Limitation 3:} Lacks semantic scene reasoning for dynamic hazards.
+    \end{itemize}
   \end{column}
 \end{columns}
 \end{frame}
 
 % Paper 2: Kathiria et al. (Neurocomputing, 2024)
-\begin{frame}{Literature Review: Assistive Systems for Visually Impaired People}
+\begin{frame}{Literature Review: Advancements in Assistive Systems}
+{\large\textbf{\textcolor{MyUnivGreen}{P. Kathiria et al. (Neurocomputing, 2024) \cite{kathiria2024assistive}}}}\\[6pt]
+
 \begin{columns}[T]
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Paper Overview \cite{kathiria2024assistive}}
-      \textbf{Authors:} P. Kathiria et al.\\
-      \textbf{Journal:} Neurocomputing (2024)\\
-      \textbf{Focus:} Comprehensive survey of advancements and state-of-the-art in assistive navigation systems.
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Main Contributions}
-      \begin{itemize}
-        \item Benchmark of sensors: LiDAR vs. Ultrasound vs. Cameras.
-        \item Taxonomy of navigation, hazard detection, and user interfaces.
-      \end{itemize}
-    \end{block}
-  \end{column}
-    
-  \begin{column}{0.34\textwidth}
-    \begin{block}{Methodology \& Technology}
-      \begin{itemize}
-        \item Deep learning object detectors (YOLO, SSD, Faster R-CNN).
-        \item Multimodal sensory integration (RGB-D + IMU + GPS).
-        \item Edge computing vs. Cloud inference trade-offs.
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Inputs \& Outputs}
-      \textbf{Input:} Video frames, depth maps, GPS coordinates.\\
-      \textbf{Output:} Directional spatial audio, speech synthesis.
-    \end{block}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Contributions \& Methodology}}\\[4pt]
+    \begin{itemize}
+      \item Benchmarked sensors: LiDAR vs. Ultrasound vs. Camera vision.
+      \item Surveyed deep learning detectors (YOLO, SSD, Faster R-CNN).
+      \item Evaluated multimodal integration (RGB-D + IMU + GPS).
+      \item Vision-based systems outperform ultrasound in hazard recognition.
+    \end{itemize}
   \end{column}
   
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Summary of Results}
-      \begin{itemize}
-        \item Vision-based systems outperform ultrasonic aids in semantic recognition.
-        \item Edge-optimized models achieve real-time latency ($<50$\,ms).
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{alertblock}{Key Limitations}
-      \begin{itemize}
-        \item Most systems require specialized hardware rigs (wearables/vests).
-        \item Lack of combined obstacle detection + semantic context.
-      \end{itemize}
-    \end{alertblock}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Inputs, Outputs \& Limitations}}\\[4pt]
+    \begin{itemize}
+      \item \textbf{Input:} Video frames, depth maps, GPS coordinates.
+      \item \textbf{Output:} Directional spatial audio, speech synthesis.
+      \item \textbf{Limitation 1:} Most reviewed systems require dedicated sensor rigs.
+      \item \textbf{Limitation 2:} High cost ($>\$500$) prohibitive for mass adoption.
+      \item \textbf{Limitation 3:} Lack of unified end-to-end smartphone software.
+    \end{itemize}
   \end{column}
 \end{columns}
 \end{frame}
 
 % Paper 3: Manirajee et al. (SLR, 2024)
 \begin{frame}{Literature Review: Systematic Review of Assistive Technologies}
+{\large\textbf{\textcolor{MyUnivGreen}{L. Manirajee et al. (IJARBSS, 2024) \cite{manirajee2024assistive}}}}\\[6pt]
+
 \begin{columns}[T]
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Paper Overview \cite{manirajee2024assistive}}
-      \textbf{Authors:} L. Manirajee et al.\\
-      \textbf{Journal:} IJARBSS (2024)\\
-      \textbf{Focus:} Systematic Literature Review (SLR) on mobility and navigation aids for visually impaired.
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Main Contributions}
-      \begin{itemize}
-        \item Systematic mapping of 50+ assistive technology publications.
-        \item Analyzed cost vs. usability barrier across user demographics.
-      \end{itemize}
-    \end{block}
-  \end{column}
-    
-  \begin{column}{0.34\textwidth}
-    \begin{block}{Methodology \& Technology}
-      \begin{itemize}
-        \item Systematic PRISMA review methodology.
-        \item Comparison of Electronic Travel Aids (ETAs), Electronic Orientation Aids (EOAs).
-        \item AI computer vision and voice interaction frameworks.
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{block}{Inputs \& Outputs}
-      \textbf{Input:} User mobility datasets, navigation metrics.\\
-      \textbf{Output:} Comparative usability matrices.
-    \end{block}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Contributions \& Methodology}}\\[4pt]
+    \begin{itemize}
+      \item PRISMA systematic review mapping 50+ assistive publications.
+      \item Analyzed cost vs. usability barrier across user demographics.
+      \item Concluded smartphones are the most scalable assistive medium.
+      \item Highlighted strong user preference for hands-free audio guidance.
+    \end{itemize}
   \end{column}
   
-  \begin{column}{0.31\textwidth}
-    \begin{block}{Summary of Results}
-      \begin{itemize}
-        \item Identified smartphone solutions as the most scalable approach.
-        \item Highlighted user preference for voice-guided navigation.
-      \end{itemize}
-    \end{block}
-    \vspace{0.1cm}
-    \begin{alertblock}{Key Limitations}
-      \begin{itemize}
-        \item Few existing works address developing nation road infrastructure.
-        \item Absence of conversational AI for scene query answering.
-      \end{itemize}
-    \end{alertblock}
+  \begin{column}{0.48\textwidth}
+    \textbf{\textcolor{MyUnivGreen}{Inputs, Outputs \& Limitations}}\\[4pt]
+    \begin{itemize}
+      \item \textbf{Input:} User mobility datasets and navigation metrics.
+      \item \textbf{Output:} Comparative usability matrices and gap analysis.
+      \item \textbf{Limitation 1:} Few existing works address developing nation roads.
+      \item \textbf{Limitation 2:} No conversational AI integration for scene querying.
+      \item \textbf{Limitation 3:} Existing tools lack offline edge inference capability.
+    \end{itemize}
   \end{column}
 \end{columns}
 \end{frame}

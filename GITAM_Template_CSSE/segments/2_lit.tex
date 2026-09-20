@@ -1,23 +1,22 @@
 \begin{frame}{Summary of Existing Work Review}
-\begin{table}[]
+\vspace{-0.2cm}
 \centering
-\caption{Comprehensive Comparison of Reviewed Assistive Navigation Systems}
-\label{tab:lit-summary}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-\rowcolor{MyUnivGreen!20}
-\textbf{\#} & \textbf{System / Work} & \textbf{Developer / Authors} & \textbf{Key Technology} & \textbf{Navigation} & \textbf{Scene Context} & \textbf{Key Limitation} \\ \hline
-1 & SmartCane & IIT Delhi / AssisTech & Ultrasonic Sensors & No & No & Distance only, no obstacle identification \\ \hline
-2 & MAVI & IIT Delhi / IIIT Delhi & Camera + Computer Vision & Partial & Partial & Prototype stage, network dependent \\ \hline
-3 & OnBoard & IIT Delhi / AssisTech & RF Wireless Comm & No & No & Limited to bus boarding, requires transit infra \\ \hline
-4 & DRISHTI & AKGEC, Ghaziabad & ESP32 + Mobile Camera & No & Partial & Basic prototype, limited real-road testing \\ \hline
-5 & Echo-Vision & SRM Institute & LiDAR + Deep Learning & GPS & Partial & Expensive custom hardware (LiDAR unit) \\ \hline
-6 & Path Navigator & KL University, AP & GPS + Sensor Array & GPS & No & Complex hardware harness, no semantic AI \\ \hline
-7 & VisionMate & APJ Abdul Kalam TU & ML Kit + Android GPS & GPS & OCR only & Android-only, basic student prototype \\ \hline
+\resizebox{0.95\textwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+\textbf{\#} & \textbf{System / Work} & \textbf{Key Technology} & \textbf{Navigation} & \textbf{Scene Context} & \textbf{Key Limitation} \\
+\midrule
+1 & SmartCane (IIT Delhi) & Ultrasonic Sensors & No & No & Distance only, no obstacle identification \\
+2 & MAVI (IIT Delhi / IIIT) & Camera + Computer Vision & Partial & Partial & Prototype stage, cloud dependent \\
+3 & OnBoard (IIT Delhi) & RF Wireless Comm & No & No & Limited to bus boarding, needs transit infra \\
+4 & DRISHTI (AKGEC) & ESP32 + Mobile Camera & No & Partial & Basic prototype, limited road tests \\
+5 & Echo-Vision (SRM) & LiDAR + Deep Learning & GPS & Partial & Expensive custom hardware (LiDAR unit) \\
+6 & Path Navigator (KLU) & GPS + Sensor Array & GPS & No & Complex hardware harness, no AI \\
+7 & VisionMate (KTU) & ML Kit + Android GPS & GPS & OCR only & Android-only, basic student prototype \\
+\midrule
 \rowcolor{MyUnivGreen!15}
-\textbf{8} & \textbf{Proposed System} & \textbf{Team T1 (GITAM CSSE)} & \textbf{YOLO + Gemini VLM + GPS} & \textbf{Full Audio} & \textbf{Full AI VLM} & \textbf{Smartphone-only, Zero extra hardware} \\ \hline
+\textbf{8} & \textbf{Proposed System} & \textbf{YOLO + Gemini + GPS} & \textbf{Full Audio} & \textbf{Full AI VLM} & \textbf{Smartphone-only, Zero extra hardware} \\
+\bottomrule
 \end{tabular}%
 }
-\end{table}
 \end{frame}

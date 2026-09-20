@@ -1,33 +1,21 @@
 \begin{frame}{Research Gaps}
-\begin{block}{Summary of Literature Review Observations}
-While several assistive technologies exist, existing solutions are constrained: either requiring expensive specialized hardware, lacking deep scene semantics, or failing to address the complexities of unstructured Indian road environments.
-\end{block}   
+{\normalsize\textit{Existing assistive solutions focus on simple obstacle presence but lack contextual scene reasoning, require expensive dedicated hardware, or fail to handle unstructured Indian roads.}}\\[10pt]
+
 \begin{columns}[T]
   \begin{column}{0.48\textwidth}
-    \begin{alertblock}{Gap 1: Expensive Dedicated Hardware}
-      \begin{itemize}
-        \item Systems like SmartCane, Echo-Vision, and ALVU require custom sensors (LiDAR, ultrasonic modules, smart glasses).
-        \item Substantially raises costs and creates adoption barriers.
-      \end{itemize}
-    \end{alertblock}
-    \begin{alertblock}{Gap 2: Limited Scene Semantics}
-      \begin{itemize}
-        \item Existing aids only output obstacle distance or bounding boxes.
-        \item Lack Vision-Language Models (VLM) for rich environmental understanding.
-      \end{itemize}
-    \end{alertblock}
+    \textbf{\textcolor{MyUnivGreen}{Gap 1: Expensive Dedicated Hardware}}\\[2pt]
+    Systems like SmartCane, Echo-Vision, and ALVU require custom sensors (LiDAR, ultrasonic modules, smart glasses), creating severe cost barriers in developing nations.\\[8pt]
+    
+    \textbf{\textcolor{MyUnivGreen}{Gap 2: Limited Scene Semantics}}\\[2pt]
+    Existing aids only indicate obstacle presence or bounding boxes without contextual understanding. No reviewed system leverages Vision-Language Models (VLMs).
   \end{column}
+  
   \begin{column}{0.48\textwidth}
-    \begin{alertblock}{Gap 3: No End-to-End Smartphone Integration}
-      \begin{itemize}
-        \item No reviewed system unifies real-time YOLO detection, VLM scene explanation, GPS navigation, OCR, and voice dialogue in one app.
-      \end{itemize}
-    \end{alertblock}
-    \begin{alertblock}{Gap 4: Indian Road Environments}
-      \begin{itemize}
-        \item Indian roads exhibit mixed traffic, potholes, vendors, and broken pavements that Western benchmarked systems fail to handle.
-      \end{itemize}
-    \end{alertblock}
+    \textbf{\textcolor{MyUnivGreen}{Gap 3: Lack of End-to-End Integration}}\\[2pt]
+    No single solution unifies real-time obstacle detection (YOLO), scene description (VLM), GPS navigation, OCR reading, and conversational voice interaction.\\[8pt]
+    
+    \textbf{\textcolor{MyUnivGreen}{Gap 4: Unstructured Indian Road Context}}\\[2pt]
+    Indian roads present unique hazards (potholes, stray animals, vendors, broken pavements) that existing Western-benchmarked models fail to handle.
   \end{column}
 \end{columns}
 \end{frame}
