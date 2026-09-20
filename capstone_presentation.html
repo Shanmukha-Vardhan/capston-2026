@@ -296,13 +296,6 @@
     margin-top: 3px;
   }
 
-  /* ═══════ GANTT ═══════ */
-  .gantt-table td.filled { background: var(--gitam-green) !important; }
-  .gantt-table td.filled-light { background: var(--gitam-green-light) !important; }
-  .gantt-table td.filled-planned {
-    background: repeating-linear-gradient(45deg, var(--gitam-green-bg), var(--gitam-green-bg) 3px, #c8e6e3 3px, #c8e6e3 6px) !important;
-  }
-
   /* ═══════ ALERT BLOCKS ═══════ */
   .alert-block {
     border-radius: 6px;
@@ -550,7 +543,7 @@
     <a class="outline-item" href="#/ew-smartcane"><span class="outline-num">3</span> Existing Work Review</a>
     <a class="outline-item" href="#/tools"><span class="outline-num">8</span> Proposed Tools &amp; Technologies</a>
     <a class="outline-item" href="#/summary"><span class="outline-num">4</span> Summary of Literature Review</a>
-    <a class="outline-item" href="#/workplan"><span class="outline-num">9</span> Workplan &amp; Timeline</a>
+    <a class="outline-item" href="#/workplan"><span class="outline-num">9</span> Workplan &amp; Task Allocation</a>
     <a class="outline-item" href="#/gaps"><span class="outline-num">5</span> Research Gaps</a>
     <a class="outline-item" href="#/disclosure"><span class="outline-num">10</span> Disclosure Statements</a>
   </div>
@@ -1265,63 +1258,64 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ -->
-<!-- SLIDE 16: WORKPLAN & TIMELINE -->
+<!-- SLIDE 16: WORKPLAN & TASK ALLOCATION -->
 <!-- ═══════════════════════════════════════════════════ -->
 <section id="workplan">
   <div class="slide-header"><h2>Workplan &amp; Task Allocation</h2></div>
-  <table>
+  
+  <table style="width:100%;border-collapse:collapse;font-size:0.67em;margin-top:8px;box-shadow:var(--shadow-sm);border-radius:8px;overflow:hidden;">
     <thead>
-      <tr><th>Task</th><th>Task Owner</th><th>% Completed</th><th>Status</th></tr>
+      <tr style="background:var(--gitam-green);color:white;">
+        <th style="padding:10px 14px;text-align:left;width:26%;">Task / Module</th>
+        <th style="padding:10px 14px;text-align:left;width:30%;">Task Owner</th>
+        <th style="padding:10px 14px;text-align:left;width:34%;">Scope &amp; Deliverables</th>
+        <th style="padding:10px 14px;text-align:center;width:10%;">Status</th>
+      </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Tools &amp; Technology Research</td>
-        <td>Gavara Vishnu Vardhan (2023000810)</td>
-        <td>100%</td>
-        <td><span class="tag tag-filled">Done</span></td>
+      <tr style="border-bottom:1px solid #e4ebe8;">
+        <td style="padding:10px 14px;font-weight:600;color:var(--gitam-green-dark);">Tools &amp; Technology Research</td>
+        <td style="padding:10px 14px;"><strong>Gavara Vishnu Vardhan</strong><br><span style="font-size:0.88em;color:var(--text-light);">Reg: 2023000810</span></td>
+        <td style="padding:10px 14px;color:var(--text-mid);">Evaluation of YOLOv8/v11 models, mobile deployment framework (React Native/Expo), and edge processing feasibility.</td>
+        <td style="padding:10px 14px;text-align:center;"><span class="tag tag-filled" style="padding:4px 12px;font-size:0.8em;">Done</span></td>
       </tr>
-      <tr>
-        <td>Literature Review</td>
-        <td>Salapu Shanmukha Vardhan (2023008203)</td>
-        <td>100%</td>
-        <td><span class="tag tag-filled">Done</span></td>
+      <tr style="border-bottom:1px solid #e4ebe8;background:#fbfdfc;">
+        <td style="padding:10px 14px;font-weight:600;color:var(--gitam-green-dark);">Literature Review</td>
+        <td style="padding:10px 14px;"><strong>Salapu Shanmukha Vardhan</strong><br><span style="font-size:0.88em;color:var(--text-light);">Reg: 2023008203</span></td>
+        <td style="padding:10px 14px;color:var(--text-mid);">Systematic survey of 7 assistive systems, formulation of 4 key research gaps, and overall system architectural flow.</td>
+        <td style="padding:10px 14px;text-align:center;"><span class="tag tag-filled" style="padding:4px 12px;font-size:0.8em;">Done</span></td>
       </tr>
-      <tr>
-        <td>Real-World Situations Analysis</td>
-        <td>Vattikuti Yagna Deepika (2023002813)</td>
-        <td>100%</td>
-        <td><span class="tag tag-filled">Done</span></td>
+      <tr style="border-bottom:1px solid #e4ebe8;">
+        <td style="padding:10px 14px;font-weight:600;color:var(--gitam-green-dark);">Real-World Situations Analysis</td>
+        <td style="padding:10px 14px;"><strong>Vattikuti Yagna Deepika</strong><br><span style="font-size:0.88em;color:var(--text-light);">Reg: 2023002813</span></td>
+        <td style="padding:10px 14px;color:var(--text-mid);">Identification of 10 unstructured road scenarios (potholes, stray animals, vendors) and audio alert priority protocols.</td>
+        <td style="padding:10px 14px;text-align:center;"><span class="tag tag-filled" style="padding:4px 12px;font-size:0.8em;">Done</span></td>
       </tr>
-      <tr>
-        <td>Documentation</td>
-        <td>Azeema Jafar Jeelani (2023001213)</td>
-        <td>100%</td>
-        <td><span class="tag tag-filled">Done</span></td>
+      <tr style="background:#fbfdfc;">
+        <td style="padding:10px 14px;font-weight:600;color:var(--gitam-green-dark);">Documentation &amp; Compliance</td>
+        <td style="padding:10px 14px;"><strong>Azeema Jafar Jeelani</strong><br><span style="font-size:0.88em;color:var(--text-light);">Reg: 2023001213</span></td>
+        <td style="padding:10px 14px;color:var(--text-mid);">Review 1 project report, IEEE references compilation, academic integrity disclosures, and template alignment.</td>
+        <td style="padding:10px 14px;text-align:center;"><span class="tag tag-filled" style="padding:4px 12px;font-size:0.8em;">Done</span></td>
       </tr>
     </tbody>
   </table>
-  <div style="font-weight:600;font-size:0.82em;color:var(--gitam-green);margin-top:10px;margin-bottom:4px;">Proposed Timeline</div>
-  <table class="gantt-table">
-    <thead>
-      <tr><th>Task</th><th>Sept (W1-2)</th><th>Sept (W3-4)</th><th>Oct (W1-2)</th><th>Oct (W3-4)</th><th>Nov (W1-2)</th><th>Nov (W3-4)</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Problem Identification</td><td class="filled"></td><td></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>Literature Survey</td><td class="filled"></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>Project Objectives</td><td></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>Workplan</td><td></td><td class="filled"></td><td></td><td></td><td></td><td></td></tr>
-      <tr><td>Requirement Analysis</td><td></td><td></td><td class="filled-light"></td><td></td><td></td><td></td></tr>
-      <tr><td>Tools/Technology/Algorithms</td><td></td><td></td><td class="filled-light"></td><td class="filled-light"></td><td></td><td></td></tr>
-      <tr><td>System Design (DFD / UML)</td><td></td><td></td><td></td><td class="filled-planned"></td><td class="filled-planned"></td><td></td></tr>
-      <tr><td>Proposed Methodology</td><td></td><td></td><td></td><td></td><td class="filled-planned"></td><td class="filled-planned"></td></tr>
-      <tr><td>Closure of Phase 1</td><td></td><td></td><td></td><td></td><td></td><td class="filled-planned"></td></tr>
-    </tbody>
-  </table>
-  <div style="display:flex;gap:14px;margin-top:4px;font-size:0.5em;color:var(--text-light);">
-    <div><span style="display:inline-block;width:12px;height:8px;background:var(--gitam-green);border-radius:2px;"></span> Completed</div>
-    <div><span style="display:inline-block;width:12px;height:8px;background:var(--gitam-green-light);border-radius:2px;"></span> In Progress</div>
-    <div><span style="display:inline-block;width:12px;height:8px;background:repeating-linear-gradient(45deg,var(--gitam-green-bg),var(--gitam-green-bg) 2px,#c8e6e3 2px,#c8e6e3 4px);border-radius:2px;"></span> Planned</div>
+
+  <!-- Phase 1 Milestone Highlights -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px;">
+    <div class="card card-green" style="padding:10px 14px;">
+      <div style="font-weight:700;font-size:0.75em;color:var(--gitam-green-dark);margin-bottom:3px;">Review 1 Milestones</div>
+      <div style="font-size:0.64em;color:var(--text-mid);line-height:1.45;">All four foundation tasks completed on schedule with 100% individual task allocation.</div>
+    </div>
+    <div class="card card-green" style="padding:10px 14px;">
+      <div style="font-weight:700;font-size:0.75em;color:var(--gitam-green-dark);margin-bottom:3px;">Equal Workload Distribution</div>
+      <div style="font-size:0.64em;color:var(--text-mid);line-height:1.45;">Research, architecture, situational analysis, and documentation mapped equally across all 4 members.</div>
+    </div>
+    <div class="card card-accent" style="padding:10px 14px;">
+      <div style="font-weight:700;font-size:0.75em;color:white;margin-bottom:3px;">Phase 2 Hand-off Ready</div>
+      <div style="font-size:0.64em;color:rgba(255,255,255,0.92);line-height:1.45;">Team transitioning into DFD/UML design, Expo UI development, and YOLO model fine-tuning.</div>
+    </div>
   </div>
+
   <img src="school_logo.png" alt="GITAM" class="slide-logo-br">
   <div class="slide-footer-bar">
     <div class="footer-left">Team T1 &nbsp;(GSCSE, GITAM)</div>
