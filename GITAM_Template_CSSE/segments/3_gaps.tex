@@ -1,12 +1,33 @@
 \begin{frame}{Research Gaps}
-    \begin{block}{Summary of Literature Review}
-       Observations made from literature review
-    \end{block}   
-    \begin{alertblock}{Gaps}
-        \begin{itemize}
-    \item First gap
-    \item Second gap
-    \item Third gap
-\end{itemize}
-    \end{alertblock}  
+\begin{block}{Summary of Literature Review Observations}
+While several assistive technologies exist, existing solutions are constrained: either requiring expensive specialized hardware, lacking deep scene semantics, or failing to address the complexities of unstructured Indian road environments.
+\end{block}   
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \begin{alertblock}{Gap 1: Expensive Dedicated Hardware}
+      \begin{itemize}
+        \item Systems like SmartCane, Echo-Vision, and ALVU require custom sensors (LiDAR, ultrasonic modules, smart glasses).
+        \item Substantially raises costs and creates adoption barriers.
+      \end{itemize}
+    \end{alertblock}
+    \begin{alertblock}{Gap 2: Limited Scene Semantics}
+      \begin{itemize}
+        \item Existing aids only output obstacle distance or bounding boxes.
+        \item Lack Vision-Language Models (VLM) for rich environmental understanding.
+      \end{itemize}
+    \end{alertblock}
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    \begin{alertblock}{Gap 3: No End-to-End Smartphone Integration}
+      \begin{itemize}
+        \item No reviewed system unifies real-time YOLO detection, VLM scene explanation, GPS navigation, OCR, and voice dialogue in one app.
+      \end{itemize}
+    \end{alertblock}
+    \begin{alertblock}{Gap 4: Indian Road Environments}
+      \begin{itemize}
+        \item Indian roads exhibit mixed traffic, potholes, vendors, and broken pavements that Western benchmarked systems fail to handle.
+      \end{itemize}
+    \end{alertblock}
+  \end{column}
+\end{columns}
 \end{frame}

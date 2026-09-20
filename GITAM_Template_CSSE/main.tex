@@ -1,18 +1,18 @@
 \documentclass[aspectratio=169]{beamer}
 \usetheme{Boadilla}
-% 1. Define your custom color using RGB values (0-255)
+% 1. Custom color using RGB values
 \definecolor{MyUnivGreen}{RGB}{0, 115, 103}
 
-% 2. Force the entire Beamer structure to use this color
+% 2. Beamer structure color
 \usecolortheme[named=MyUnivGreen]{structure}
 \usefonttheme{serif}
 \usepackage{cite}
-\usepackage[table]{xcolor} % Required for table coloring
-\usepackage{lipsum}
+\usepackage[table]{xcolor}
 \usepackage{graphicx,xcolor}
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
 
-\logo{\includegraphics[width=3.5cm, keepaspectratio]{images/logo/school_logo.png}}
+\logo{\includegraphics[width=2.5cm, keepaspectratio]{images/logo/school_logo.png}}
 
 \AtBeginSection[]{ 
     \begin{frame}{Outline} 
@@ -20,11 +20,17 @@
     \end{frame} }
 
 \title[Capstone Project Introduction]{Review 1\\PROJ2999 Capstone Project Introduction}
-\subtitle{Title of the Project}
-\author[Team No.]{Names of Team Members, Reg No. and Guide Name (As per GITAM record) }
+\subtitle{Smartphone-Based AI-Powered Navigation Assistant for Visually Impaired Individuals}
+\author[Team T1]{%
+  \textbf{Team T1}\\[3pt]
+  Gavara Vishnu Vardhan (2023000810) \quad Salapu Shanmukha Vardhan (2023008203)\\[2pt]
+  Vattikuti Yagna Deepika (2023002813) \quad Azeema Jafar Jeelani (2023001213)\\[4pt]
+  \small\textit{Guide: Suraj Aravind Bollapragada (120035)}
+}
 \institute[GSCSE, GITAM]{Department of Computer Science and Systems Engineering\\GITAM School of CSE\\GITAM Deemed to be University, Visakhapatnam}
+\date{September 20, 2026}
 
-\titlegraphic{\includegraphics[width=5cm]{images/logo/school_logo.png}}
+\titlegraphic{\includegraphics[width=4.5cm]{images/logo/school_logo.png}}
 
 \begin{document}
 {\logo{}
@@ -33,13 +39,14 @@
 \end{frame}
 }
 
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
 \section{Introduction}
 \input{segments/1_intro}
 
 \section{Literature Review}
-\input{segments/2i_lit_review_Paper1}
-
-\section{Literature Review (Paper 1)}
 \input{segments/2_LitReviewTemplate}
 
 \section{Summary of Literature Review}
@@ -54,19 +61,16 @@
 \section{Research Objectives}
 \input{segments/5_obj}
 
-\section{Workplan and Proposed Timeline}
+\section{Workplan \& Task Allocation}
 \input{segments/7_time}
 
 \section{Action Plan}
 \input{segments/8_conclude}
 
-
 \section*{References}
-\begin{frame}
-    \frametitle{References}
-    References in the IEEE format as follows:
+\begin{frame}[allowframebreaks]{References}
     \bibliographystyle{ieeetr}
-\bibliography{ref}
+    \bibliography{ref}
 \end{frame}
 
 \section{Disclosure Statements}

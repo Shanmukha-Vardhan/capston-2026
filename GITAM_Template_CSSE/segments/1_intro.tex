@@ -1,6 +1,50 @@
-\begin{frame}{Introduction}
-   \begin{itemize}
-  \item Students are suggested to keep the introduction to the problem short, clear and crisp.
-   \item Maximum two slides can be used for introduction.
-   \end{itemize}
+\begin{frame}{Introduction: Problem Context \& Approach}
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \begin{block}{The Problem Context}
+      \begin{itemize}
+        \item Visually impaired individuals face daily barriers to independent mobility in unstructured Indian road environments.
+        \item Traditional white canes only detect obstacles via direct physical contact with zero contextual awareness.
+        \item Most existing electronic aids rely on bulky, expensive custom hardware (LiDAR, ultrasonic sensors).
+      \end{itemize}
+    \end{block}
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    \begin{block}{Our Smartphone-Based Approach}
+      \begin{itemize}
+        \item Low-cost, accessible smartphone solution eliminating specialized hardware.
+        \item Real-time computer vision (YOLO) for obstacle detection (vehicles, pedestrians, potholes).
+        \item Gemini Vision-Language Model for semantic scene understanding.
+        \item Audio-first interface via GPS navigation, OCR text reading, and voice interaction (STT/TTS).
+      \end{itemize}
+    \end{block}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Real-World Situations Addressed}
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \begin{exampleblock}{Road Safety \& Mobility}
+      \begin{itemize}
+        \item \textbf{Crossing Roads}: Vehicle approach speed and directional alerts.
+        \item \textbf{Walking on Footpaths}: Detects pedestrians, poles, and broken slabs.
+        \item \textbf{Potholes / Uneven Ground}: Surface hazard recognition.
+        \item \textbf{Fast Approaching Vehicles}: Motorcycle and bicycle warnings.
+        \item \textbf{Crowded Streets}: Real-time obstacle navigation in markets.
+      \end{itemize}
+    \end{exampleblock}
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    \begin{exampleblock}{Wayfinding \& Accessibility}
+      \begin{itemize}
+        \item \textbf{Finding Bus Stops}: GPS and camera-guided transit location.
+        \item \textbf{Reading Road Signs}: OCR text extraction with speech output.
+        \item \textbf{Blocked Footpaths}: Parked vehicles, construction debris, vendors.
+        \item \textbf{Essential Destinations}: Turn-by-turn guidance to clinics and pharmacies.
+        \item \textbf{Emergency Help}: One-touch SOS with live GPS location sharing.
+      \end{itemize}
+    \end{exampleblock}
+  \end{column}
+\end{columns}
 \end{frame}
